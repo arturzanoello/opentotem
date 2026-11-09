@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+.expo
+apps/kiosk/android
+apps/kiosk/ios
+pnpm-lock.yaml

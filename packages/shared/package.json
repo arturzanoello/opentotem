@@ -1,0 +1,19 @@
+{
+  "name": "@opentotem/shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Contracts and business rules shared by the API, the kiosk and the web panel.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@opentotem/config": "workspace:*",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
+  }
+}

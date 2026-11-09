@@ -1,0 +1,18 @@
+{
+  "name": "@opentotem/pos-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One TypeScript API for payment terminals from different manufacturers.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@opentotem/config": "workspace:*",
+    "typescript": "~6.0.3"
+  }
+}

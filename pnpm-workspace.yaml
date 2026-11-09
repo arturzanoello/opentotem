@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+  - packages/*
+
+# React Native / Metro still resolves best with a flat node_modules.
+nodeLinker: hoisted
+
+# Dependencies allowed to run install scripts.
+allowBuilds:
+  esbuild: true
