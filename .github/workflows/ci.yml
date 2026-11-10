@@ -46,5 +46,11 @@ jobs:
       - run: pnpm format:check
       - run: pnpm lint
       - run: pnpm typecheck
+
+      - name: Migrate and seed
+        run: pnpm db:migrate && pnpm db:seed
+        env:
+          DATABASE_URL: ${{ env.DATABASE_URL_TEST }}
+
       - run: pnpm test
       - run: pnpm build

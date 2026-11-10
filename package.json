@@ -19,7 +19,11 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "db:up": "docker compose up -d",
-    "db:down": "docker compose down"
+    "db:down": "docker compose down",
+    "db:generate": "pnpm --filter @opentotem/api db:generate",
+    "db:migrate": "pnpm --filter @opentotem/api db:migrate",
+    "db:seed": "pnpm --filter @opentotem/api db:seed",
+    "db:studio": "pnpm --filter @opentotem/api db:studio"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

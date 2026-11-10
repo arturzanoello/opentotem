@@ -2,7 +2,7 @@
 
 Open-source self-service kiosk platform: a React Native kiosk app, a Node.js API and a real-time web panel for the kitchen and the order display, plus `pos-bridge`, one TypeScript API for payment terminals from different manufacturers.
 
-> Work in progress: day 1 of a 21-day build. [Versão em português](README.pt-BR.md).
+> Work in progress: day 2 of a 21-day build. [Versão em português](README.pt-BR.md).
 
 ## What's inside
 
@@ -24,6 +24,8 @@ Requirements: Node.js 22+ (24 recommended), pnpm, and Docker (for PostgreSQL).
 pnpm install
 cp .env.example .env
 pnpm db:up          # PostgreSQL on localhost:5432
+pnpm db:migrate     # create the tables
+pnpm db:seed        # demo data: Café Oeste menu and device tokens
 pnpm dev            # API on :3333 and web panel on :5173
 pnpm dev:kiosk      # Expo dev server for the kiosk app
 ```
@@ -41,6 +43,16 @@ Check the API: `curl http://localhost:3333/health`.
 | `pnpm typecheck` | TypeScript in every package                |
 | `pnpm build`     | Production builds of the API and web panel |
 | `pnpm format`    | Prettier                                   |
+
+Database:
+
+| Command            | What it does                                                   |
+| ------------------ | -------------------------------------------------------------- |
+| `pnpm db:up`       | Start PostgreSQL in Docker                                     |
+| `pnpm db:generate` | Create a migration from changes in `apps/api/src/db/schema.ts` |
+| `pnpm db:migrate`  | Apply pending migrations                                       |
+| `pnpm db:seed`     | Reset the database and load the Café Oeste demo data           |
+| `pnpm db:studio`   | Browse the data in Drizzle Studio                              |
 
 ## Engineering rules
 

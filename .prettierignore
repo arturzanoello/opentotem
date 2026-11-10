@@ -5,3 +5,4 @@ coverage
 apps/kiosk/android
 apps/kiosk/ios
 pnpm-lock.yaml
+apps/api/drizzle

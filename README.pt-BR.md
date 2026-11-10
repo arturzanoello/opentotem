@@ -2,7 +2,7 @@
 
 Plataforma open-source de autoatendimento: app de totem em React Native, API em Node.js e painel web em tempo real para a cozinha e o painel de senhas, além da `pos-bridge`, uma API única em TypeScript para terminais de pagamento de fabricantes diferentes.
 
-> Em construção: dia 1 de 21. [English version](README.md).
+> Em construção: dia 2 de 21. [English version](README.md).
 
 ## Como rodar
 
@@ -12,6 +12,8 @@ Requisitos: Node.js 22+ (24 recomendado), pnpm e Docker (para o PostgreSQL).
 pnpm install
 cp .env.example .env
 pnpm db:up          # PostgreSQL em localhost:5432
+pnpm db:migrate     # cria as tabelas
+pnpm db:seed        # dados de demonstração: cardápio do Café Oeste e tokens dos dispositivos
 pnpm dev            # API na porta 3333 e painel web na 5173
 pnpm dev:kiosk      # servidor do Expo para o app do totem
 ```
